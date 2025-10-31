@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Image Gallery — Lightbox + Filters</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Responsive Image Gallery</h1>
+        <p class="lead">Hover effects, lightbox navigation, categories and image filters.</p>
+      </div>
+
+      <div class="controls">
+        <div class="filters" role="tablist" aria-label="Category filters">
+          <button class="btn active" data-filter="all">All</button>
+          <button class="btn" data-filter="nature">Nature</button>
+          <button class="btn" data-filter="city">City</button>
+          <button class="btn" data-filter="people">People</button>
+        </div>
+
+        <div class="filter-select">
+          <label class="hint">Filter:</label>
+          <select class="select" id="imageFilter" aria-label="Image filter">
+            <option value="filter-none">None</option>
+            <option value="filter-grayscale">Grayscale</option>
+            <option value="filter-sepia">Sepia</option>
+            <option value="filter-contrast">High contrast</option>
+            <option value="filter-bright">Slightly bright</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="gallery" class="gallery filter-none">
+        <!-- each .card has data-category and data-title for filtering + caption -->
+
+        <!-- images use unsplash random signatures so they load different photos — replace with your own image paths -->
+        <a class="card" data-category="nature" data-title="Misty Forest" href="#" data-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=60" alt="Misty Forest">
+          <div class="meta"><span class="tag">Nature</span><span>Misty Forest</span></div>
+        </a>
+
+        <a class="card" data-category="city" data-title="Colorful Alley" href="#" data-src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=60" alt="Colorful Alley">
+          <div class="meta"><span class="tag">City</span><span>Colorful Alley</span></div>
+        </a>
+
+        <a class="card" data-category="people" data-title="Smiling Portrait" href="#" data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Smiling Portrait">
+          <div class="meta"><span class="tag">People</span><span>Smiling Portrait</span></div>
+        </a>
+
+        <a class="card" data-category="nature" data-title="Ocean Cliffs" href="#" data-src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Ocean Cliffs">
+          <div class="meta"><span class="tag">Nature</span><span>Ocean Cliffs</span></div>
+        </a>
+
+        <a class="card" data-category="city" data-title="Night Lights" href="#" data-src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=800&q=60" alt="Night Lights">
+          <div class="meta"><span class="tag">City</span><span>Night Lights</span></div>
+        </a>
+
+        <a class="card" data-category="people" data-title="Candid Smile" href="#" data-src="https://images.unsplash.com/photo-1545996124-1b3d3e7a1f9d?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=80
+" alt="Candid Smile">
+          <div class="meta"><span class="tag">People</span><span>Candid Smile</span></div>
+        </a>
+
+        <a class="card" data-category="nature" data-title="Snowy Path" href="#" data-src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60" alt="Snowy Path">
+          <div class="meta"><span class="tag">Nature</span><span>Snowy Path</span></div>
+        </a>
+
+        <a class="card" data-category="city" data-title="Urban Bridge" href="#" data-src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=60" alt="Urban Bridge">
+          <div class="meta"><span class="tag">City</span><span>Urban Bridge</span></div>
+        </a>
+
+        <a class="card" data-category="people" data-title="Thoughtful" href="#" data-src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=60" alt="Thoughtful">
+          <div class="meta"><span class="tag">People</span><span>Thoughtful</span></div>
+        </a>
+
+      </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+      <div class="lb-inner fade-in">
+        <button class="lb-close" aria-label="Close">✕</button>
+        <button class="lb-prev" aria-label="Previous">◀</button>
+        <img class="lb-img" src="" alt="">
+        <button class="lb-next" aria-label="Next">▶</button>
+        <div class="caption"></div>
+      </div>
+    </div>
+
+  </div>
+<script src="script.js"></script>
+
+ 
+</body>
+</html>
